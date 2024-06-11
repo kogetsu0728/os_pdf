@@ -15,7 +15,7 @@ def get_image_dirs(parent_dir):
     return image_dirs
 
 def get_slide_number(image_name):
-    match = re.search(r'(\d+)\.PNG', image_name)
+    match = re.search(r'スライド(\d+)\.PNG', image_name)
 
     if match:
         return int(match.group(1))
