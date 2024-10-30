@@ -5,7 +5,7 @@ from PIL import Image
 from reportlab.pdfgen import canvas
 
 def get_image_dirs(parent_dir):
-    pattern = re.compile(r'^OSⅠ第\d+回$')
+    pattern = re.compile(r'^OSⅡ第\d+回$')
 
     image_dirs = list()
     for sub_dir in os.listdir(parent_dir):
@@ -37,7 +37,7 @@ def images_to_pdf(image_files, pdf_name):
     print(f"{pdf_name}を作成したよ! :)")
 
 def main():
-    parent_dir = "./path/to/parent_dir"
+    parent_dir = "../downloads/授業資料"
     image_dirs = get_image_dirs(parent_dir)
 
     for image_dir in image_dirs:
